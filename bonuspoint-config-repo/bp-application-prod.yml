@@ -1,0 +1,74 @@
+# 生产环境
+# 数据库配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.98.32.123:3306/bonuspoint?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: mysql_point_824_fzm
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 1
+    minIdle: 1
+    maxActive: 20
+    maxWait: 60000
+    validationQuery: select 'x'
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    #配置监控统计拦截的filters，去掉后监控界面SQL无法统计，“wall”用于防火墙
+    filters: stat,wall,log4j
+
+  #redis
+  redis:
+    host: 47.98.32.123
+    database: 0
+    port: 6379
+    password: redis_point_824_fzm
+    pool:
+      max-idle: 8
+      max-active: 8
+      max-wait: 1
+      min-idle: 0
+    timeout: 0
+    #key 过期时间 秒
+    keyOutTime: 3000
+    #keySign 过期时间 秒
+    keySignOutTime: 60
+
+# 分布式文件系统fastdfs配置
+fdfs:
+  # socket连接超时时长
+  so-timeout: 1500
+  # 连接tracker服务器超时时长
+  connect-timeout: 600
+  pool:
+    # 从池中借出的对象的最大数目
+    max-total: 153
+    # 获取连接时的最大等待毫秒数100
+    max-wait-millis: 102
+  # 缩略图生成参数，可选
+  thumb-image:
+    width: 150
+    height: 150
+  # 跟踪服务器tracker_server请求地址,支持多个，这里只有一个，如果有多个在下方加- x.x.x.x:port
+  tracker-list:
+  - 47.98.33.123:22122
+  # 存储服务器storage_server访问地址
+  web-server-url: https://worldtradebase.com/fdfs/
+
+blockChain:
+  url: http://116.62.142.251:9901
+
+
+# 接口开关，支持0/1/false/true
+# 0/false: 返回挡板信息
+# 1/true: 正常服务
+method:
+  # 上链模块
+  chain: true
+  # 短信邮件模块
+  sms: true

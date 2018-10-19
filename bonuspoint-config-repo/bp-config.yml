@@ -1,0 +1,67 @@
+# 通用配置信息
+# 定义分页常量
+page:
+  # 默认当前页
+  currentPage: 1
+  # 默认页面大小
+  pageSize: 10
+  #收货地址默认分页大小
+  addressPageSize: 5
+  # 每页最大行数
+  maxSize: 30
+  name: test
+
+md5:
+  salt: 123456
+
+reward:
+  #作为奖励的积分最少要求量
+  minPointNum: 1000
+
+
+# 公私钥
+key:
+  # 初始化公私钥，用于初始化时平台创建，其他地方勿用
+  init:
+    publicKey: 0c5c8dbaac85400767494836bbf6b70294ccd3072f3233d5be280198ed7788ad
+    privateKey: f1cfa773b4e471cabcae5cb607e22aed68ac770b14ad1b0069eac16563644f4f
+  #初始化创建平台的公私钥，其他地方使用平台公私钥请从数据库查
+  platform:
+    id: 1
+    publicKey: b15a4f6c5c1163b5f80715c9bd87d5118ec4b5668cb29f148eeceec61ddeadc2
+    privateKey: 90b289fda1fb0439158f837bbe60cc1ec99616dd0bc6335d6fd0bf3d22888e20
+
+#平台公私钥从数据库查，以下信息作废
+# 平台公私钥
+platform:
+  id: 1
+  publicKey: b15a4f6c5c1163b5f80715c9bd87d5118ec4b5668cb29f148eeceec61ddeadc2
+  privateKey: 90b289fda1fb0439158f837bbe60cc1ec99616dd0bc6335d6fd0bf3d22888e20
+  admin:
+    publicKey: 0c5c8dbaac85400767494836bbf6b70294ccd3072f3233d5be280198ed7788ad
+    privateKey: f1cfa773b4e471cabcae5cb607e22aed68ac770b14ad1b0069eac16563644f4f
+
+blockChain:
+  to: 1DEptsTBpKpX5uCGUJzjKJcg6DEL4pddaG
+  execer: brokerpoints
+  pwd: 123456
+
+token:
+  client:
+    app: app
+    browser: browser
+  outTime:
+    browser: 1800
+    app: 300000
+  # token加密密钥
+  encrypt:
+    key: 123456
+#邮件标题
+email_title: 验证码
+#邮件内容
+email_content: 邮箱验证码为code,为了您的账号安全，请妥善保管。
+#短信内容
+sms_content: 【wtc区块链】您的验证码为:code,如非本人操作,请尽快联系我们,联系电话：4008266913
+
+
+
