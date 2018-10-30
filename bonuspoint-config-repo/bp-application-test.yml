@@ -60,7 +60,7 @@ fdfs:
   #- 47.98.33.123:22122
   - 192.168.242.128:22122
   # 存储服务器storage_server访问地址
-  web-server-url: https://192.168.242.128:8080/
+  web-server-url: http://192.168.242.128:8080/fdfs/
 
 blockChain:
   url: http://172.16.100.18:9901
