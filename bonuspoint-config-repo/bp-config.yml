@@ -17,7 +17,13 @@ md5:
 reward:
   #作为奖励的积分最少要求量
   minPointNum: 1000
-
+spring:
+  security:
+    user:
+      # 认证使用的用户名
+      name: admin
+      # 认证使用的密码
+      password: 123456
 
 # 公私钥
 key:
