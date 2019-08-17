@@ -38,6 +38,9 @@ pagehelper:
   # 就会查询出全部的结果（相当于没有执行分页查询，但是返回结果仍然是 Page 类型）
   page-size-zero: true
 
+
+
+
 eureka:
   instance:
     instance-id: ${spring.cloud.client.ipAddress}:${server.port}
