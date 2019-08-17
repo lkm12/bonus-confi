@@ -78,3 +78,5 @@ ribbon:
 logging:
   level:
     com.fuzamei.bonuspoint.dao: debug
+
+signing.key: "345345fsdfsf5345"
