@@ -74,3 +74,12 @@ method:
   chain: true
   # 短信邮件模块
   sms: false
+
+#zuul.routes.service‐a.path=/service‐a/**
+#zuul.routes.service‐a.serviceId=hello‐service
+#zuul.routes.service‐b.path=/service‐b/**
+
+zuul:
+  routes:
+    service‐a.path: /service‐a/**
+
