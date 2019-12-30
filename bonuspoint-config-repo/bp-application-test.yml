@@ -81,5 +81,6 @@ method:
 
 zuul:
   routes:
-    service‐a.path: /aaa/*
-#/service‐a/**
+    service‐a.path: /service‐a/**
+
+/aaa/*
