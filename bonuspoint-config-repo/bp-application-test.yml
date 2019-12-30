@@ -81,8 +81,11 @@ method:
 
 zuul:
   routes:
-    service‐a.path: /service‐a/**
-    service‐a.serviceId : hello‐service1
+    HELLO-SERVICE1: /hello/**
+
+
+    #service‐a.path: /service‐a/**
+    #service‐a.serviceId : hello‐service1
 
 #/service‐a/**
 # /aaa/*
